@@ -1,0 +1,10 @@
+.venv
+
+# pre-compiled files
+*.pyc
+
+# secrets
+_*.py
+
+# sample files
+sample_audio/
