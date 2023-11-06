@@ -1,8 +1,6 @@
 import requests
 import json
-import sys
 
-# sys.path.append("..")
 from common._secrets import OPENAI_API_KEY  # pylint: disable=import-error
 
 
