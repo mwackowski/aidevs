@@ -1,5 +1,6 @@
 from langchain.chat_models.openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
+
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
@@ -12,6 +13,7 @@ and nothing more and truthfully says "don't know" when the CONTEXT is not enough
 
 context###{context}###
 """
+
 human_template = "{text}"
 
 chat_prompt = ChatPromptTemplate.from_messages(

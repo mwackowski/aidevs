@@ -5,8 +5,9 @@ from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
 
-text = [HumanMessage(content="Hey There!")]
-
 chat = ChatOpenAI()
-content = chat.predict_messages(text)
+
+human_msg = [HumanMessage(content="Hey There!")]
+content = chat.predict_messages(human_msg)
+
 print(content)
