@@ -1,3 +1,6 @@
+import textwrap
+
+
 def get_message(ai_response):
     """Return a message from ai response.
 
@@ -12,3 +15,11 @@ def get_message(ai_response):
     'usage': {'prompt_tokens': 75, 'completion_tokens': 4, 'total_tokens': 79}}
     """
     return ai_response["choices"][0]["message"]["content"]
+
+
+def print_task(task, print_len=150):
+    for k, v in task.items():
+        print(k)
+        wrapped = textwrap.wrap(str(v), print_len)
+        print("\n".join(wrapped))
+        print("*" * print_len)
