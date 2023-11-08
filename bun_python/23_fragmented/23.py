@@ -12,7 +12,7 @@ documents = [
     "Adam is a programmer who specializes in JavaScript full-stack development",
     "with a particular focus on using frameworks like Svelte and NestJS.",
     "Adam has a dog named Alexa.",
-    "Adam is also a designer."
+    "Adam is also a designer.",
 ]
 
 documents = [Document(page_content=doc) for doc in documents]
