@@ -9,3 +9,6 @@ _*.py
 # sample files
 sample_audio/
 # bun_python/
+
+*.db
+*.sqlite

@@ -49,13 +49,12 @@ if not indexed:
 # Index documents if not indexed
 collection_info = client.get_collection(COLLECTION_NAME)
 if not collection_info.points_count:
-
     # Read File
     loader = TextLoader(MEMORY_PATH)
     memory = loader.load()
 
     # Create list of Documents with metadata
-    # Is it possible to do this without Document class? We should be able to achieve the same result with 
+    # Is it possible to do this without Document class? We should be able to achieve the same result with
     # List of dicts (metadata), as they contain content as well.
     documents = [
         Document(

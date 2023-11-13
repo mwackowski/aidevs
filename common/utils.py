@@ -23,3 +23,9 @@ def print_task(task, print_len=150):
         wrapped = textwrap.wrap(str(v), print_len)
         print("\n".join(wrapped))
         print("*" * print_len)
+
+
+def chunks(lst, n):
+    """Yield successive n-sized chunks from lst."""
+    for i in range(0, len(lst), n):
+        yield lst[i : i + n]
