@@ -75,3 +75,30 @@ def send_chat_completion(
             "temperature": temperature,
         },
     )
+
+
+def send_vision_request(user_input, image_url, max_tokens=300, model="gpt-4-vision-preview"):
+    return make_request(
+      endpoint="chat/completions",
+      data={
+        "model": model,
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": user_input
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": image_url
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": max_tokens
+      }
+    )
